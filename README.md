@@ -1,3 +1,7 @@
+# Application Model Diagram
+
+![Application Model Diagram](https://raw.githubusercontent.com/rcanpahali/QUIZ-15.08.2021/main/Application_Model_Diagram.png)
+
 # KKTCELL QUIZ - Kurulum Adımları
 
 Ekteki adımları takip ederek kurulumu gerçekleştirebilirsiniz.
