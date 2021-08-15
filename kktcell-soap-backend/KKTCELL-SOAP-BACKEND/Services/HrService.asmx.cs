@@ -22,11 +22,15 @@ namespace KKTCELL_SOAP_BACKEND.Services
         [ScriptMethod(ResponseFormat = ResponseFormat.Json)]
         public string GetStaffList()
         {
+            // Staff list will be placed here
             var lst = new List<StaffModel>();
+            // Read Oracle connection string from Web.config
             var conString = ConfigurationManager.ConnectionStrings["ORACLE"].ConnectionString;
+            //Create oracle connection
             using (var con = new OracleConnection(conString))
             {
                 con.Open();
+                // Call F_GET_STAFF_LIST from logged in scheme (returns table)
                 const string query = "SELECT * FROM TABLE(F_GET_STAFF_LIST)";
                 using (var cmd = new OracleCommand(query, con))
                 {
@@ -34,7 +38,7 @@ namespace KKTCELL_SOAP_BACKEND.Services
                     var reader = cmd.ExecuteReader();
                     while (reader.Read())
                     {
-
+                        // Pass reader values to variables
                         int pStaffId = Convert.ToInt32(reader[0]);
                         string pStaffName = reader[1].ToString().Trim();
                         string pStaffSurname = reader[2].ToString().Trim();
@@ -44,6 +48,7 @@ namespace KKTCELL_SOAP_BACKEND.Services
                         string pManagerName = reader[6].ToString().Trim();
                         string pStaffLocation = reader[7].ToString().Trim();
 
+                        // Push into the list to return
                         lst.Add(new StaffModel()
                         {
                             StaffId = pStaffId,
@@ -59,6 +64,7 @@ namespace KKTCELL_SOAP_BACKEND.Services
 
                 }
             }
+
             var res = new JavaScriptSerializer().Serialize(lst);
             return res;
         }
