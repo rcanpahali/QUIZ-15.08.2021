@@ -8,7 +8,7 @@ Ekteki adımları takip ederek kurulumu gerçekleştirebilirsiniz.
 
 ## 1. React Front-End Uygulamasının Kurulumu
 
-Projenin kök dizinine (kktcell-react-frontend) PowerShell veya Command Prop kullanarak navigate olunuz, ve gerekli modülleri install ediniz.
+Projenin kök dizinine (kktcell-react-frontend) PowerShell veya Command Prompt kullanarak navigate olunuz, ve gerekli modülleri install ediniz.
 
 ```bash
 npm install
@@ -28,7 +28,7 @@ npm start
 
 ## 2. NodeJS Back-End Uygulamasının Kurulumu
 
-Projenin klasörüne (kktcell-express-backend) PowerShell veya Command Prop penceresi kullanarak navigate olunuz, ve gerekli modülleri install ediniz.
+Projenin klasörüne (kktcell-express-backend) PowerShell veya Command Prompt penceresi kullanarak navigate olunuz, ve gerekli modülleri install ediniz.
 
 ```bash
 npm install
@@ -70,7 +70,7 @@ http://localhost:5000/ adresi tarayıcıda render edilecek şekilde configure ed
 
 ## 4. Database Kurulumu
 
-Database operasyonlarına ait DDL'leri "Database Seeder" klasöründen yukarıdan aşağıya sıralı bir şekilde çalıştırabilirsiniz.
+Database operasyonlarına ait DDL komutlarını "Data Seeder" klasöründen  çalıştırabilirsiniz.
 
 
 ## License
